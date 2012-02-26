@@ -1,0 +1,7 @@
+<article>
+  <h3><%= post.title %></h3>
+  <p class="meta">By <%= post.author %> (<%= link_to "Edit" %> |
+                                         <%= link_to "Destroy", posts_path,
+                                             :method => 'Delete', :confirm => "Are you sure?" %>)</p>
+  <p class="content"><%= post.body %></p>
+</article>
