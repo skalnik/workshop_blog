@@ -1,8 +1,3 @@
-<%= render 'post', :post => @post %>
-<%= @post.comments.each do |comment| %>
-  <p><%= comment.name %></p>
-  <p><%= comment.body %></p>
-<% end %>
 <%= form_for [post, comment] do |f| %>
   <p>
     <%= f.label :author, 'Name' %><br />
@@ -17,4 +12,3 @@
     <%= f.text_area :body%>
   </p>
 <% end %>
-<%= link_to 'Home', posts_path %>
